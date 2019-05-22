@@ -1,0 +1,33 @@
+Lenfest Community Weekend 2019 Presentation Outline
+
+1.  Introduction
+    A.  Classical understanding of gravity
+        I.   Newton
+    B.  Special relativity
+        I.   Speed of light constant for all observers
+        II.  Basic consequences (time dilation, length contraction, etc.)
+        III. Brief explanation of Lorentz transformation
+            a. Just illustrate difference between Lorentz transformation and Galilean
+        IV.  Shortcoming: only applies to inertial (non-accelerating) reference frames
+    C.  General relativity
+        I.   Accounts for acceleration and external forces
+    D.  Gravitational waves
+        I.   How are they a consequenc of GR?
+        II.  Brief explanation of interferometers
+        III. Detections so far
+
+2.  Gravitational wave parameter estimation
+    A.  Basics
+        I.   What is parameter estimation?
+            a. Comparison of models to observations to recover source parameters
+        II.  Iterative 
+        II.  Posterior distribution (examples of corner plots)
+
+3.  BNS mergers and kilonovae
+    A.  BNS vs. BBH
+    B.  Kilonovae
+    C.  Overview of GW170817 detections
+    D.  EM PE
+
+4.  Joint GW/EM parameter estimation
+    A.  Combining data channels helps constrain parameters
