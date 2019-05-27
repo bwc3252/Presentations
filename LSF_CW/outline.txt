@@ -31,5 +31,4 @@ Lenfest Community Weekend 2019 Presentation Outline
     C.  Overview of GW170817 detections
     D.  EM PE
 
-4.  Joint GW/EM parameter estimation
-    A.  Combining data channels helps constrain parameters
+4.  Conclusion
