@@ -9,6 +9,7 @@
 
 \begin{document}
 \title{Astrophysical Parameter Inference with Gravitational Wave and Electromagnetic Data Channels}
+\subtitle{Lenfest Community Weekend 2019}
 \author{Ben Champion}
 \institute{Rochester Institute of Technology \\ Center for Computational Relativity and Gravitation}
 
@@ -18,7 +19,7 @@
 }
 
 \date{
-  \today
+  June 8, 2019
 }
 
 \frame{
@@ -33,11 +34,12 @@
 
 \frame{ \frametitle{Classical Physics}
   \begin{itemize}
-    \item Late 1600s - Newton's law of universal gravitation:
+    \item Late 1600s - Newton's law of universal gravitation \pause
     \begin{figure}
       \includegraphics[width=1.75in]{Images/universal_gravitation}
       \caption*{\fontsize{8pt}{10pt}\selectfont Image by Dennis Nilsson}
-    \end{figure}
+    \end{figure} \pause
+    \item "Action at a distance"
   \end{itemize}
 }
 
@@ -145,11 +147,32 @@
   \end{itemize}
 }
 
+\frame{ \frametitle{LIGO}
+  \begin{columns}[c]
+    \column{3.0in}
+    \begin{itemize}
+      \item Laser Interferometer Gravitational Wave Observatory \pause
+      \item Two detectors \pause
+      \begin{itemize}
+        \item Hanford, Washington \pause
+        \item Livingston, Louisiana \pause
+      \end{itemize}
+      \item Designed to detect gravitational waves predicted by Einstein's theory of General Relativity \pause
+      \item Over 1300 researchers from over 100 institutions \pause
+    \end{itemize}
+    \column{2.0in}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{Images/ligo_livingston}
+      \caption*{\fontsize{8pt}{10pt}\selectfont The Livingston detector (image by Caltech/MIT/LIGO Lab )}
+    \end{figure}
+\end{columns}
+}
+
 \frame{ \frametitle{Gravitational Wave Interferometry}
   \begin{columns}[c]
     \column{2.5in}
     \begin{itemize}
-      \item LIGO - the Laser Interferometer Gravitational Wave Observatory - has two detectors
+      \item LIGO has two detectors
     \end{itemize}
     \begin{figure}
       \includegraphics[width=2.0in]{Images/interferometer}
@@ -173,7 +196,7 @@
   \end{figure}
 }
 
-\section{Gravitational Wave PE}
+\section{Gravitational Wave Parameter Estimation}
 
 \frame{ \frametitle{What is Parameter Estimation?}
   \begin{itemize}
@@ -199,14 +222,15 @@
 \frame{ \frametitle{Bayes' Theorem and Model Likelihoods}
   For a vector of unknown parameters $\vec \theta$, proposed waveform model $H$, and set of observations $\{d\}$, Bayes' Theorem gives the \textit{probability density function} of $\vec \theta$ as
   \begin{align*}
-    p(\vec \theta | \{d\}, H) = \frac {p(\vec \theta | H) p(\{d\} | \vec \theta, H)} {p(\{d\} | H)}
+    p(\vec \theta | \{d\}, H) = \frac {p(\vec \theta | H) p(\{d\} | \vec \theta, H)} {P(\{d\} | H)}
   \end{align*} \pause
   \begin{itemize}
     \item $p(\vec \theta | H)$ is the \textit{prior} distribution of $\vec \theta$ \pause
     \item $p(\{d\} | \vec \theta, H)$ is the \textit{likelihood function} - the likelihood of observing $\{d\}$ given $\vec \theta$ and $H$ \pause
     \begin{itemize}
-      \item Function of residuals - differences between model and data
+      \item Function of residuals - differences between model and data \pause
     \end{itemize}
+    \item $P(\{d\} | H)$ is called the \textit{evidence} for a model (a constant for each model)
   \end{itemize}
 }
 
@@ -221,7 +245,7 @@
 \frame{ \frametitle{Posterior Distribution Example}
   \begin{figure}
     \includegraphics[width=2.5in]{Images/corner_example}
-    \caption*{Example of posterior distrubution of masses for GW150914 (arXiv:1807.10312)}
+    \caption*{Example of posterior distribution of masses for GW150914 (arXiv:1807.10312)}
   \end{figure}
 }
 
@@ -237,8 +261,8 @@
     \end{itemize}
     \column{2.0in}
     \begin{figure}
-      \includegraphics[width=2.0in]{Images/bns_image}
-      \caption*{X-ray light rings from a binary neutron star}
+      \includegraphics[width=2.0in]{Images/neutron_star}
+      \caption*{A simulated view of a neutron star (image by Rafael Jean-Luc Alexandre)}
     \end{figure}
   \end{columns}
 }
@@ -247,7 +271,8 @@
   \begin{columns}[c]
     \column{2.5in}
     \begin{itemize}
-      \item Kilonovae produce electromagnetic (EM) transients through the radioactive decay of ejected material \pause
+      \item Kilonovae eject large amounts of material at high velocities \pause
+      \item They produce electromagnetic (EM) transients through the radioactive decay of this ejected material \pause
       \item These EM signals can be observed and used in the analysis of BNS mergers \pause
       \item GW170817: first BNS merger detected by LIGO, accompanied by electromagnetic observations across frequency bands \pause
     \end{itemize}
@@ -256,7 +281,15 @@
       \includegraphics[width=\linewidth]{Images/lightcurves}
       \caption*{GW170817 lightcurves (arXiv:1710.05840)}
     \end{figure}
+    Lightcurve: light intensity as a function of time
   \end{columns}
+}
+
+\frame{ \frametitle{GW170817}
+\begin{figure}
+  \includegraphics[width=3.5in]{Images/timeline}
+  \caption*{GW170817 timeline of detections (arXiv:1710.05833)}
+\end{figure}
 }
 
 \section{GW/EM PE}
@@ -270,6 +303,25 @@
     \end{align*}
     where $x(t)$ is the lightcurve magnitude at time $t$, $m(t | \vec \theta)$ is the model value at time $t$ given the current model parameters, $\Delta x(t)$ is the data error, and $\Delta m(t | \vec \theta)$ is the model error.
   \end{itemize}
+}
+
+\frame{ \frametitle{EM Parameter Estimation}
+  \begin{columns}
+    \column{2.5in}
+    \begin{figure}
+      \includegraphics[width=2.5in]{Images/likelihood}
+    \end{figure}
+    \column{2.5in}
+    \pause
+    \begin{align*}
+      \ln L = -0.5 \sum \frac {(x(t) - m(t | \vec \theta))^2} {\Delta x(t)^2 + \Delta m(t | \vec \theta)^2}
+    \end{align*} \pause
+    \begin{itemize}
+      \item For a given set of parameters, run the model \pause
+      \item Subtract data from model \pause
+      \item Calculate log-likelihood from difference \pause
+    \end{itemize}
+  \end{columns}
 }
 
 \begin{frame}[fragile] \frametitle{\texttt{EM\_PE}: Rapid Parameter Estimation for EM Transients}
@@ -304,25 +356,41 @@
 \end{frame}
 
 \frame{ \frametitle{Example}
-  PE for GW170817 data with WoKo2017 model on $z$ band:
-  \begin{figure}
-    \includegraphics[width=2.6in]{Images/GW170817_woko2017.png}
-  \end{figure}
+  \begin{columns}[c]
+    \column{2.5in}
+    \begin{figure}
+      \includegraphics[width=2.2in]{Images/GW170817_woko2017.png}
+      \caption*{Posterior distribution of parameters (ejecta mass and velocity) for GW170817}
+    \end{figure}
+    \column{2.5in}
+    \begin{itemize}
+      \item Kilonova model that takes ejecta mass and velocity as parameters \pause
+      \item Model outputs lightcurve (light intensity as function of time) in various wavelength bands \pause
+      \begin{itemize}
+        \item $z$ band (900 nm wavelength) data used here \pause
+      \end{itemize}
+      \item Plot posterior probability (from Bayes' Theorem)
+    \end{itemize}
+  \end{columns}
 }
 
-\frame{ \frametitle{Example}
-  PE for GW170817 data with two-component WoKo2017 model on $z$ band:
-  \begin{figure}
-    \includegraphics[width=2.4in]{Images/GW170817_woko2017_two_comp.png}
-  \end{figure}
-}
-
-\frame{ \frametitle{Example}
-  PE for GW170817 data with two-component Me2017 model on $z$ band:
-  \begin{figure}
-    \includegraphics[width=2.4in]{Images/GW170817_me2017_mej.png}
-  \end{figure}
-}
+%\frame{ \frametitle{Example}
+%  \begin{columns}[c]
+%    \column{2.5in}
+%    \begin{figure}
+%      \includegraphics[width=2.6in]{Images/GW170817_me2017_mej.png}
+%    \end{figure}
+%    \column{2.5in}
+%    \begin{itemize}
+%      \item Two-component kilonova model (two ejecta masses and velocities)\pause
+%      \begin{itemize}
+%        \item Different opacity for each \pause
+%      \end{itemize}
+%      \item Same data band ($z$) used here \pause
+%      \item This model also has $v_{ej}$ for each component as parameters, but only $m_{ej}$ is shown here
+%    \end{itemize}
+%  \end{columns}
+%}
 
 \frame{ \frametitle{Ongoing Work}
   \begin{itemize}
