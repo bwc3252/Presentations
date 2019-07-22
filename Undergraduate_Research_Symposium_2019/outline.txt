@@ -1,0 +1,20 @@
+Outline
+=======
+
+Total time allotted is 15 minutes
+  - 12 for presentation
+  - 3 for questions
+
+[title slide]
+Parameter Inference with Gravitational Wave and Electromagnetic Data
+  - Ben Champion
+  - Rochester Institute of Technology
+  - Center for Computational Relativity and Gravitation
+  - RIT Undergraduate Research Symposium
+  - August 1, 2019
+  - [RIT logo, CCRG logo]
+
+[table of contents]
+
+[introduction]
+
